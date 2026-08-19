@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Siva K — IT Fresher | Java, SQL &amp; Automation Testing</title>
+    <meta
+      name="description"
+      content="Portfolio of Siva K, B.Tech IT graduate from Chennai. Java, SQL, Selenium automation testing, manual QA and web development projects."
+    />
+    <meta name="author" content="Siva K" />
+    <meta property="og:title" content="Siva K — IT Fresher Portfolio" />
+    <meta
+      property="og:description"
+      content="Java, SQL, Selenium and QA-focused portfolio of Siva K, IT graduate based in Chennai, India."
+    />
+    <meta property="og:type" content="profile" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="./index.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <style>
+      :root {
+        --background: oklch(0.16 0.012 60);
+        --foreground: oklch(0.96 0.012 85);
+        --card: oklch(0.21 0.014 60);
+        --primary: oklch(0.72 0.17 55);
+        --primary-foreground: oklch(0.18 0.02 60);
+        --muted-foreground: oklch(0.72 0.02 75);
+        --accent: oklch(0.78 0.13 165);
+        --border: oklch(0.32 0.015 60);
+        --font-display: "Bebas Neue", sans-serif;
+        --font-body: "Barlow", sans-serif;
+        --font-mono: "JetBrains Mono", monospace;
+        --gradient-ember: linear-gradient(120deg, oklch(0.72 0.17 55), oklch(0.82 0.16 90));
+        --shadow-lift: 0 24px 60px -30px oklch(0.72 0.17 55 / 0.45);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--background);
+        color: var(--foreground);
+        font-family: var(--font-body);
+        font-weight: 300;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-display);
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 0.86;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+      }
+      .mono {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: var(--muted-foreground);
+      }
+      .ember {
+        background: var(--gradient-ember);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      #progress {
+        position: fixed;
+        inset: 0 auto auto 0;
+        height: 2px;
+        width: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        background: var(--primary);
+        z-index: 50;
+      }
+      section {
+        padding: 6rem 1.5rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      @media (min-width: 768px) {
+        section {
+          padding: 6rem 3.5rem;
+        }
+      }
+      /* HERO */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        position: relative;
+      }
+      #hero .glow {
+        position: absolute;
+        right: -10rem;
+        top: 3rem;
+        width: 36rem;
+        height: 36rem;
+        border-radius: 999px;
+        background: var(--gradient-ember);
+        opacity: 0.22;
+        filter: blur(90px);
+        pointer-events: none;
+      }
+      .top-bar {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+      h1.name {
+        font-size: 18vw;
+        letter-spacing: -0.01em;
+      }
+      @media (min-width: 768px) {
+        h1.name {
+          font-size: 13vw;
+        }
+      }
+      h1.name span {
+        display: inline-block;
+        opacity: 0;
+        animation: drop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      @keyframes drop {
+        from {
+          opacity: 0;
+          transform: translateY(0.4em) rotate(-4deg);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .fade {
+        opacity: 0;
+        animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      .eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1.5rem;
+      }
+      .lede {
+        margin-top: 2rem;
+        max-width: 36rem;
+        font-size: 1.125rem;
+        line-height: 1.75;
+        color: var(--muted-foreground);
+      }
+      .cta-row {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+      .btn {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        padding: 0.9rem 1.5rem;
+        border-radius: 2px;
+        transition:
+          transform 0.2s,
+          color 0.2s,
+          border-color 0.2s;
+      }
+      .btn.solid {
+        background: var(--primary);
+        color: var(--primary-foreground);
+      }
+      .btn.ghost {
+        border: 1px solid var(--border);
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+      .btn.ghost:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+      .marquee {
+        position: relative;
+        overflow: hidden;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
+        margin-top: 3rem;
+      }
+      .marquee-track {
+        display: flex;
+        gap: 2.5rem;
+        width: max-content;
+        white-space: nowrap;
+        animation: marquee 26s linear infinite;
+      }
+      .marquee-track span {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: var(--muted-foreground);
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+      }
+      .marquee-track i {
+        color: var(--primary);
+        font-style: normal;
+      }
+      @keyframes marquee {
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      /* SECTION HEADS */
+      .head {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+        margin-bottom: 2.5rem;
+      }
+      .head small {
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--primary);
+      }
+      .head h2 {
+        font-size: 2.5rem;
+      }
+      @media (min-width: 768px) {
+        .head h2 {
+          font-size: 3rem;
+        }
+      }
+      /* REVEAL */
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+          transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: none;
+      }
+      /* GRID / CARDS */
+      .grid2 {
+        display: grid;
+        gap: 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .grid2 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .panel {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        padding: 1.75rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition:
+          transform 0.3s,
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .panel:hover {
+        transform: translateY(-6px);
+        border-color: color-mix(in oklab, var(--primary) 55%, transparent);
+        box-shadow: var(--shadow-lift);
+      }
+      .panel .row {
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: var(--muted-foreground);
+      }
+      .panel .row .tag {
+        color: var(--accent);
+      }
+      .panel h3 {
+        margin-top: 1.5rem;
+        font-size: 1.85rem;
+      }
+      .panel p {
+        margin-top: 1rem;
+        flex: 1;
+        line-height: 1.7;
+        color: var(--muted-foreground);
+      }
+      .chips {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .chip {
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 0.25rem 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        color: var(--muted-foreground);
+        transition:
+          color 0.2s,
+          border-color 0.2s;
+      }
+      .chip.big {
+        padding: 0.5rem 1.25rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+      }
+      .chip:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+      /* EXPERIENCE */
+      .exp {
+        display: grid;
+        gap: 1.5rem;
+        border-top: 1px solid var(--border);
+        padding: 2.5rem 0;
+      }
+      @media (min-width: 768px) {
+        .exp {
+          grid-template-columns: 1fr 2fr;
+        }
+      }
+      .exp h3 {
+        font-size: 1.85rem;
+      }
+      .exp .meta {
+        margin-top: 0.75rem;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25em;
+        color: var(--primary);
+      }
+      .exp li {
+        display: flex;
+        gap: 1rem;
+        color: var(--muted-foreground);
+        line-height: 1.7;
+        margin-bottom: 0.75rem;
+      }
+      .exp li::before {
+        content: "";
+        margin-top: 0.85rem;
+        height: 1px;
+        width: 1.5rem;
+        flex: none;
+        background: var(--primary);
+      }
+      /* SKILLS + EDU */
+      .cols {
+        display: grid;
+        gap: 4rem;
+      }
+      @media (min-width: 768px) {
+        .cols {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .skill {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid var(--border);
+        padding: 1.25rem 0;
+      }
+      .skill .v {
+        font-size: 1.25rem;
+        transition: color 0.2s;
+      }
+      .skill:hover .v {
+        color: var(--primary);
+      }
+      .edu {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        padding: 1.5rem;
+        margin-bottom: 1.25rem;
+        transition:
+          border-color 0.3s,
+          box-shadow 0.3s;
+      }
+      .edu:hover {
+        border-color: color-mix(in oklab, var(--primary) 55%, transparent);
+        box-shadow: var(--shadow-lift);
+      }
+      .edu h3 {
+        font-size: 1.5rem;
+      }
+      .edu p {
+        margin-top: 0.75rem;
+        color: var(--muted-foreground);
+      }
+      .edu .m {
+        margin-top: 0.25rem;
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        color: var(--accent);
+      }
+      /* CONTACT */
+      .contact {
+        margin-top: 6rem;
+        border-top: 1px solid var(--border);
+        padding-top: 3rem;
+      }
+      .contact h2 {
+        margin-top: 1.5rem;
+        font-size: 14vw;
+      }
+      @media (min-width: 768px) {
+        .contact h2 {
+          font-size: 9vw;
+        }
+      }
+      .links {
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 3rem;
+      }
+      .links a:hover {
+        color: var(--primary);
+      }
+      footer {
+        margin-top: 4rem;
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        color: var(--muted-foreground);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="progress"></div>
+
+    <main>
+      <!-- HERO -->
+      <section id="hero">
+        <div class="glow" aria-hidden="true"></div>
+        <div class="top-bar mono">
+          <span>Siva K</span>
+          <span id="clock">Chennai, IN</span>
+        </div>
+
+        <div style="position: relative">
+          <p class="eyebrow fade" style="animation-delay: 0.05s">IT Fresher · QA &amp; Development</p>
+          <h1 class="name">
+            <span style="animation-delay: 0.1s">S</span><span style="animation-delay: 0.17s">I</span
+            ><span style="animation-delay: 0.24s">V</span><span style="animation-delay: 0.31s">A</span>
+            <span class="ember" style="animation-delay: 0.45s">K</span>
+          </h1>
+          <p class="lede fade" style="animation-delay: 0.6s">
+            Motivated and detail-oriented IT graduate seeking an entry-level role where technical
+            knowledge, problem-solving and a genuine curiosity for building software turn into real
+            contribution.
+          </p>
+          <div class="cta-row fade" style="animation-delay: 0.75s">
+            <a class="btn solid" href="mailto:sivak@example.com">Email me</a>
+            <a class="btn ghost" href="tel:+917904504418">+91 79045 04418</a>
+          </div>
+        </div>
+
+        <div class="marquee">
+          <div class="marquee-track" id="marquee"></div>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+      <section>
+        <div class="head reveal">
+          <small>01 / Projects</small>
+          <h2>Selected work</h2>
+        </div>
+        <div class="grid2" id="projects"></div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section>
+        <div class="head reveal">
+          <small>02 / Internships</small>
+          <h2>Experience</h2>
+        </div>
+        <div id="experience"></div>
+      </section>
+
+      <!-- SKILLS + EDUCATION -->
+      <section class="cols">
+        <div>
+          <div class="head reveal">
+            <small>03 / Skills</small>
+            <h2>Toolkit</h2>
+          </div>
+          <div id="skills"></div>
+        </div>
+        <div>
+          <div class="head reveal">
+            <small>04 / Education</small>
+            <h2>Academics</h2>
+          </div>
+          <div id="education"></div>
+        </div>
+      </section>
+
+      <!-- INTERESTS + CONTACT -->
+      <section>
+        <div class="head reveal">
+          <small>05 / Beyond work</small>
+          <h2>Off the clock</h2>
+        </div>
+        <div class="chips" id="interests"></div>
+
+        <div class="contact reveal">
+          <p
+            class="mono"
+            style="color: var(--accent); letter-spacing: 0.35em"
+          >
+            Open to opportunities
+          </p>
+          <h2><span class="ember">Let's talk</span></h2>
+          <div class="links mono">
+            <span>Chrompet, Chennai, Tamil Nadu</span>
+            <a href="tel:+917904504418">+91 79045 04418</a>
+            <a href="mailto:sivak@example.com">Email</a>
+            <a href="#" rel="noopener">LinkedIn</a>
+            <a href="#" rel="noopener">GitHub</a>
+          </div>
+          <footer>© <span id="year"></span> Siva K</footer>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const projects = [
+        {
+          id: "01",
+          title: "Quiz Application",
+          tag: "Web Development",
+          body: "Web-based quiz platform with interactive questions, answer validation and a clean navigation flow.",
+          stack: ["HTML", "CSS", "JavaScript"],
+        },
+        {
+          id: "02",
+          title: "Sports Event Organizer",
+          tag: "Systems",
+          body: "Event scheduling and participant management system for coordinating multi-sport tournaments.",
+          stack: ["Java", "SQL"],
+        },
+        {
+          id: "03",
+          title: "Student Engagement Prediction",
+          tag: "Machine Learning",
+          body: "Predictive model analysing participation signals to surface engagement patterns in online classes.",
+          stack: ["Python", "Data Processing"],
+        },
+        {
+          id: "04",
+          title: "Preventing Water Contamination",
+          tag: "Monitoring",
+          body: "Monitoring solution that identifies potential contamination sources to support safer water management.",
+          stack: ["Python", "Analytics"],
+        },
+      ];
+
+      const experience = [
+        {
+          role: "Fintech Intern — M2P",
+          place: "Perambalur Branch",
+          when: "June 2026",
+          points: [
+            "Hands-on exposure to Lending LOS/LMS, prepaid, debit and forex card products.",
+            "Contributed to a Gold Loan Lending LOS/LMS system: payment rewards, API workflows, transaction validation and QA.",
+            "Built practical understanding of product design and workflow structuring.",
+          ],
+        },
+        {
+          role: "Python Intern — CSIR",
+          place: "Madras",
+          when: "Research",
+          points: [
+            "Practical experience in Python programming, data processing and automation.",
+            "Supported research-oriented technical activities end to end.",
+          ],
+        },
+      ];
+
+      const skills = [
+        ["Programming", "Java"],
+        ["Database", "SQL"],
+        ["Testing", "Manual Testing"],
+        ["Automation", "Selenium with Java"],
+        ["Web", "HTML · CSS · JavaScript"],
+      ];
+
+      const education = [
+        ["B.Tech / B.E. Information Technology", "Karpagam College of Engineering", "2025 · CGPA 7.7"],
+        ["Higher Secondary Certificate", "Sri Ramakrishna Matric. Hr. Sec. School", "2021 · 83%"],
+        ["Secondary School Leaving Certificate", "St. Andrews Matric. Hr. Sec. School", "2019 · 77%"],
+      ];
+
+      const interests = [
+        "Cricket — District",
+        "Football — School Zonal",
+        "Rifle Shooting",
+        "Basketball",
+      ];
+
+      const marquee = [
+        "Java",
+        "SQL",
+        "Selenium",
+        "Manual Testing",
+        "JavaScript",
+        "Python",
+        "QA Workflows",
+        "Fintech",
+      ];
+
+      document.getElementById("marquee").innerHTML = [...marquee, ...marquee]
+        .map((m) => `<span>${m}<i>◆</i></span>`)
+        .join("");
+
+      document.getElementById("projects").innerHTML = projects
+        .map(
+          (p, i) => `
+        <article class="panel reveal" style="transition-delay:${i * 0.08}s">
+          <div class="row"><span>${p.id}</span><span class="tag">${p.tag}</span></div>
+          <h3>${p.title}</h3>
+          <p>${p.body}</p>
+          <div class="chips">${p.stack.map((s) => `<span class="chip">${s}</span>`).join("")}</div>
+        </article>`,
+        )
+        .join("");
+
+      document.getElementById("experience").innerHTML = experience
+        .map(
+          (e, i) => `
+        <div class="exp reveal" style="transition-delay:${i * 0.1}s">
+          <div>
+            <h3>${e.role}</h3>
+            <p class="meta">${e.place} · ${e.when}</p>
+          </div>
+          <ul>${e.points.map((pt) => `<li>${pt}</li>`).join("")}</ul>
+        </div>`,
+        )
+        .join("");
+
+      document.getElementById("skills").innerHTML = skills
+        .map(
+          ([label, value], i) => `
+        <div class="skill reveal" style="transition-delay:${i * 0.06}s">
+          <span class="mono">${label}</span><span class="v">${value}</span>
+        </div>`,
+        )
+        .join("");
+
+      document.getElementById("education").innerHTML = education
+        .map(
+          ([title, org, meta], i) => `
+        <div class="edu reveal" style="transition-delay:${i * 0.06}s">
+          <h3>${title}</h3><p>${org}</p><p class="m">${meta}</p>
+        </div>`,
+        )
+        .join("");
+
+      document.getElementById("interests").innerHTML = interests
+        .map(
+          (it, i) =>
+            `<span class="chip big reveal" style="transition-delay:${i * 0.05}s">${it}</span>`,
+        )
+        .join("");
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const clock = () => {
+        const t = new Intl.DateTimeFormat("en-GB", {
+          hour: "2-digit",
+          minute: "2-digit",
+          timeZone: "Asia/Kolkata",
+        }).format(new Date());
+        document.getElementById("clock").textContent = `Chennai, IN · ${t} IST`;
+      };
+      clock();
+      setInterval(clock, 30000);
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      const bar = document.getElementById("progress");
+      const onScroll = () => {
+        const h = document.documentElement;
+        const p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+        bar.style.transform = `scaleX(${p})`;
+      };
+      onScroll();
+      addEventListener("scroll", onScroll, { passive: true });
+    </script>
+  </body>
+</html>
